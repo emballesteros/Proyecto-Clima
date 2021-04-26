@@ -77,9 +77,9 @@ function guardarHora(data){
     const HoraRemota = date_time_txt;
     const HoraLocal2 = document.createElement('div');
     HoraLocal2.innerHTML = `Hora Local: ${HoraRemota}`;
-    HoraLocal2.classList.add('text-2xl', 'col-start-5', 'col-span-4');
+    HoraLocal2.classList.add('text-2xl', 'col-start-5', 'col-span-4', 'text-black');
     const resultadoDiv = document.createElement('div');
-    resultadoDiv.classList.add('text-center', 'text-white', 'grid', 'grid-cols-12', 'gap-4', 'mt-5');
+    resultadoDiv.classList.add('text-center', 'text-white', 'grid', 'grid-cols-12', 'gap-4', 'mt-5', 'text-black');
     resultadoDiv.appendChild(HoraLocal2);
     resultado.appendChild(resultadoDiv);
     console.log(HoraRemota);
@@ -123,60 +123,70 @@ function showWeather(datos){
         case (icono==='01d'):
             palabra = "Soleado"
             imgsrc = "img/soleado.png"
+            document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1541119638723-c51cbe2262aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1504&q=80')";
         break;
     
         case (icono==='01n'):
             palabra = "Despejado"
             imgsrc = "img/luna.png"
+            document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1552761876-88d67be96c89?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80')";
         break;
     
         case (icono==='02d'):
-            palabra = " Parcialmente Nublado"
+            palabra = "Parcialmente Nublado"
             imgsrc = "img/parciald.png"
+            document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1589929495919-05051292c361?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80')";
         break;
     
         case (icono==='02n'):
             palabra = " Parcialmente Nublado"
             imgsrc = "img/parcialn.png"
+            document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1589929495919-05051292c361?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80')";
         break;
 
         case ((icono==='03d') || (icono==='03n') || (icono==='04d') || (icono==='04n')):
             palabra = "Nublado"
             imgsrc = "img/totalmentn.png"
+            document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1533579729827-fe37e76ea92b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80')";
         break;
 
         case ((icono==='09d') || (icono==='09n') || (icono==='10d') || (icono==='10n')):
             palabra = " Lluvia"
             imgsrc = "img/lluvia.png"
+            document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1593981211728-41e4e796ec96?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80')";
         break;
 
         case ((icono==='11d') || (icono==='11n')):
             palabra = "Tormenta Electrica"
             imgsrc = "img/tormenta.png"
+            document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1429552054921-018e433d7d34?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1510&q=80')";
         break;
 
         case ((icono==='13d') || (icono==='13n')):
             palabra = "Nieve"
             imgsrc = "img/snowf.png"
+            document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1616662424826-666487f4630f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80')";
         break;
 
         case ((icono==='50d') || (icono==='50n')):
             palabra = "Neblina"
             imgsrc = "img/mist.png"
+            document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1531275834704-a73f8f932814?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80')";
         break;
     }
 
     
     const nombreCiudad = document.createElement('div');
     nombreCiudad.innerHTML = `El Clima en ${name}, es:`;
-    nombreCiudad.classList.add('text-4xl', 'mt-5', 'font-bold', 'col-start-5', 'col-span-4' )
+    nombreCiudad.classList.add('text-4xl', 'mt-5', 'font-bold', 'col-start-5', 'col-span-4', 'text-black')
    
     const actual = document.createElement('div');
     actual.innerHTML = `${centigrados} &#8451;`;
-    actual.classList.add('font-bold', 'text-6xl', 'text-center', 'col-start-5', 'col-span-2');
+    actual.classList.add('font-bold', 'text-6xl', 'text-center', 'col-start-5', 'col-span-2', 'text-black');
 
     const divImagen = document.createElement('div');
     const imagenC = document.createElement('img');
+
     imagenC.src = imgsrc;
     divImagen.classList.add('col-start-7', 'col-span-2');
     imagenC.classList.add('mx-auto');
@@ -184,18 +194,18 @@ function showWeather(datos){
 
     const minMax = document.createElement('div');
     minMax.innerHTML = `min/Max   ${min}&#8451;/${max}&#8451;`
-    minMax.classList.add('font-bold','text-center', 'col-start-5', 'col-span-2');
+    minMax.classList.add('font-bold','text-center', 'col-start-5', 'col-span-2', 'text-black');
 
     const tempSensa = document.createElement('div');
     tempSensa.innerHTML = `Sensación Termica: ${sensacion} &#8451;`;
-    tempSensa.classList.add('font-bold', 'text-center', 'col-start-5', 'col-span-2');
+    tempSensa.classList.add('font-bold', 'text-center', 'col-start-5', 'col-span-2', 'text-black');
 
     const cielo = document.createElement('div');
     cielo.innerHTML = `Cielo: ${palabra}`;
-    cielo.classList.add('font-bold', 'col-start-7', 'col-span-2', 'text-center');
+    cielo.classList.add('font-bold', 'col-start-7', 'col-span-2', 'text-center', 'text-black');
 
     const resultadoDiv = document.createElement('div');
-    resultadoDiv.classList.add('text-center', 'text-white', 'grid', 'grid-cols-12', 'gap-4');
+    resultadoDiv.classList.add('text-center', 'text-white', 'grid', 'grid-cols-12', 'gap-4', 'text-black');
     resultadoDiv.appendChild(nombreCiudad);
     /* resultadoDiv.appendChild(HoraLocal); */
     resultadoDiv.appendChild(actual);
@@ -276,8 +286,3 @@ anime.timeline({loop: true})
     easing: "easeOutExpo",
     delay: 500
   });
-
-
-
-
-
